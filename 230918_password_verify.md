@@ -22,10 +22,13 @@ Sqlmapでダンプをとるとこのようになっている。（３ユーザ�
 
 ![image](https://github.com/yukaFUNAMI/Etc/assets/6504854/9fa650cb-1791-4d15-a07c-9b2eed06f9d1)
 
-Interceptしてno1のadminのHash値でno2のtestのパスワードでOK。アドミンのSessionがくる。
+Interceptしてid1のadminのHash値でid2のtestのパスワードでOK。adminのSessionがくる。
 
 ![image](https://github.com/yukaFUNAMI/Etc/assets/6504854/3e7cc844-1315-49fa-bb59-a7f252e7acab)
 
 ![image](https://github.com/yukaFUNAMI/Etc/assets/6504854/713c23be-cd27-41fd-8143-49c311650cdb)
 
 普通に複文で全部TestのHashにUPDATEすればいいとおもったが、できなかった。（全員同じパワードになるので楽）
+
+ログイン口で試していたところ、Hash値とパスワードがきちんと紐つかなくてもログインできているようだったので、
+４ユーザのHash値とパスワード組み合わせで試したところできた。
